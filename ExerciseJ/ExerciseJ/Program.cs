@@ -136,22 +136,6 @@ namespace ExerciseJ
                            
             //}
 
-           
-          
-            
-
-            
-
-
-
-
-
-
-
-
-
-
-
             Console.ReadLine();
         }
     }
