@@ -1,0 +1,105 @@
+﻿<div class="container-fluid">
+    <div class="card">
+        <div class="card-header">
+            Insurance Quote
+        </div>
+        <div class="card-body">
+            @using (Html.BeginForm("Admin", "Home", FormMethod.Post))
+            {
+                <div class="form-group row">
+                    <label for="txtFirstName" class="col-sm-2 col-form-label">First Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="firstName" id="txtFirstName" placeholder="First Name">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="txtLastName" class="col-sm-2 col-form-label">Last Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="lastName" id="txtLastName" placeholder="Last Name">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="emailAddress" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" name="emailAddress" id="emailAddress" placeholder="Email">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="dateOfBirth" class="col-sm-2 col-form-label">Date Of Birth</label>
+                    <div class="col-sm-2">
+                        <input type="date" class="form-control" name="dateOfBirth" id="dateOfBirth" placeholder="Date of Birth">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="carYear" class="col-sm-2 col-form-label">Car Year</label>
+                    <div class="col-sm-2">
+                        <input type="number" class="form-control" name="carYear" id="carYear" placeholder="Year">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="carMake" class="col-sm-2 col-form-label">Car Make</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="carMake" id="carMake" placeholder="Make">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="carModel" class="col-sm-2 col-form-label">Car Model</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" name="carModel" id="carModel" placeholder="Model">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="speedingTickets" class="col-sm-2 col-form-label">How many speeding tickets?</label>
+                    <div class="col-sm-2">
+                        <input type="number" class="form-control" name="speedingTickets" id="speedingTickets" placeholder="Speeding Tickets">
+                    </div>
+                </div>
+                <fieldset class="form-group">
+                    <div class="row">
+                        <legend class="col-form-label col-sm-2 pt-0">Have you had a DUI?</legend>
+                        <div class="col-sm-10">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioDui" id="radioOne" value="no" checked>
+                                <label class="form-check-label" for="radioOne">
+                                    No
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioDui" id="radioTwo" value="yes">
+                                <label class="form-check-label" for="radioTwo">
+                                    Yes
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="form-group">
+                    <div class="row">
+                        <legend class="col-form-label col-sm-2 pt-0">Full Coverage or Liability?</legend>
+                        <div class="col-sm-10">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioCoverage" id="radioThree" value="full" checked>
+                                <label class="form-check-label" for="radioThree">
+                                    Full
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioCoverage" id="radioFour" value="liability">
+                                <label class="form-check-label" for="radioFour">
+                                    Liability
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+
+            }
+           
+        </div>
+    </div>
+</div>
