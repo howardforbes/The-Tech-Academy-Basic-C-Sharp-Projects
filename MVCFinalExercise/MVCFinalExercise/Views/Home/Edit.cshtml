@@ -1,0 +1,58 @@
+﻿@model MVCFinalExercise.Models.Rental
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-header">
+           Edit Rental
+        </div>
+        <div class="card-body">
+            @using (Html.BeginForm("Edit", "Home", FormMethod.Post))
+            {
+                <input name="id" value="@Model.Id" hidden />
+                <div class="form-group row">
+                    <label for="txtFirstName" class="col-sm-2 col-form-label">First Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="firstName" id="txtFirstName" value="@Model.FirstName">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="txtLastName" class="col-sm-2 col-form-label">Last Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="lastName" id="txtLastName" value="@Model.LastName">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="movieTitle" class="col-sm-2 col-form-label">Movie Title</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="movieTitle" id="movieTitle" value="@Model.MovieTitle">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="emailAddress" class="col-sm-2 col-form-label">Email Address</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" name="emailAddress" id="emailAddress" value="@Model.Email">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="checkOutDate" class="col-sm-2 col-form-label">Check-out Date</label>
+                    <div class="col-sm-2">
+                        <input type="datetime" class="form-control" name="checkOutDate" id="checkOutDate" value="@Model.CheckOutDate">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+
+
+            }
+
+        </div>
+    </div>
+</div>
+

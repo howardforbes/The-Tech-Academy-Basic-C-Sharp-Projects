@@ -1,0 +1,43 @@
+﻿@using MVCFinalExercise.Models
+@model List<Rental>
+
+@{
+    ViewBag.Title = "Rentals";
+}
+
+<div class="card">
+    <div class="card-header">
+        Rentals
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Movie</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Date Checked Out</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var rental in Model)
+                {
+                    <tr>
+                        <td>@rental.FirstName</td>
+                        <td>@rental.LastName</td>
+                        <td>@rental.MovieTitle</td>
+                        <td>@rental.Email</td>
+                        <td>@rental.CheckOutDate</td>
+                        <td><a href="/Home/Edit/@rental.Id">Edit</a></td>
+                        <td><a href="/Home/Delete/@rental.Id">Delete</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <a href="/Home/Add">Add Rental</a>
+
+    </div>
+</div>
